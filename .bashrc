@@ -29,17 +29,20 @@ export ARCH=`uname -m`
 export UNAME=`uname`
 
 
-PATH=$MY_PATH:$LOCAL_PATH:$STANDARD_PATH:.
-MANPATH=$MY_MANPATH:$LOCAL_MANPATH:$STANDARD_MANPATH:.
+PATH=$PATH:$MY_PATH:$LOCAL_PATH:$STANDARD_PATH:.
+MANPATH=$MANPATH:$MY_MANPATH:$LOCAL_MANPATH:$STANDARD_MANPATH:.
 export MANPATH
 
 
 PS1="@\h \$PWD :v) "
+
 PATH=$PATH:~/bin
 alias swipl="env -i swipl"
 alias ll="ls -l"
 alias restart="source ~/.bashrc"
 alias gcc="gcc -g" 
+#alias gcc="gcc -Wall -g -std=gnu1x -I/cs/www/classes/cs352/fall15/h"
+#alias gcc="gcc -Wall -g" 
 
 alias vg="valgrind --leak-check=full"
 export LC_COLLATE=C
