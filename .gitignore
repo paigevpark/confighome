@@ -1,5 +1,7 @@
-/*
-!.vimrc
-!.vim/**/**
-!.bashrc
+*
+!*vimrc
+!*.vim
+!*vim/**/**
+!*bashrc
 .gitconfig
+*.swp
