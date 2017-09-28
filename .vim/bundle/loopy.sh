@@ -6,3 +6,5 @@ do
 		git submodule add $(cd $i && git remote show origin | grep Fetch | awk '{print $3}') ./$i
 	fi
 done
+
+#yeah

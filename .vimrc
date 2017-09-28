@@ -18,7 +18,7 @@ set wildmenu
 "set softtabstop=4
 "set shiftwidth=4
 set list
-set listchars=tab:>-
+"set listchars=tab:>-
 execute pathogen#infect()
 "syntax on this one overrides current settings
 syntax enable
@@ -53,8 +53,15 @@ let g:airline#extensions#tabline#enabled = 1
 "let g:airline_theme='angr'
 let g:airline_theme='bubblegum'
 "end for vim-airline
+"
+"for ctrlp
+let g:ctrlp_max_files = 0
+"end for ctrlp
 
 try
     colorscheme koehler 
 catch
 endtry
+
+"Notes
+"vert(optional) sb# to split buffer
