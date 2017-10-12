@@ -3,5 +3,6 @@
 !*.vim
 !*vim/**/**
 !*bashrc
+!*.sh
 .gitconfig
 *.swp
