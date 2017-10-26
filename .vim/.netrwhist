@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/ppark/hackathon/web-chat/config'
-let g:netrw_dirhist_2='/Users/ppark/workspace/monolith/monolith-locally/files/xdebug.so'
-let g:netrw_dirhist_3='/Users/ppark/workspace/monolith/core/Qualtrics/ConfigFiles/dev/ppark'
-let g:netrw_dirhist_4='/Users/ppark/workspace/monolith/core'
-let g:netrw_dirhist_5='/Users/ppark/.vim/bundle/detectindent.vim'

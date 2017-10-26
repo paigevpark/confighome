@@ -38,6 +38,10 @@ let g:syntastic_check_on_wq = 0
 "for ack.vim
 cnoreabbrev Ack Ack! --smart-case
 nnoremap <leader>a ":Ack!<Space>--smart-case"
+
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
 "end for ack.vim
 
 "for vim-airline
@@ -57,6 +61,11 @@ let g:airline_theme='bubblegum'
 "for ctrlp
 let g:ctrlp_max_files = 0
 "end for ctrlp
+"
+"for Session
+let g:session_autoload = 'no'
+
+"end for Session
 
 try
     colorscheme koehler 

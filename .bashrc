@@ -37,16 +37,16 @@
 
 STANDARD_PATH=/bin:/usr/local/bin:/usr/bin:/usr/ccs/bin:/usr/sbin:/usr/etc:/etc/:/usr/openwin/bin:/usr/bin/X11
 LOCAL_PATH=/bin:/usr/local/bin:/usr/ucb:/usr/bin/X11::/usr/X11/bin:/opt/SUNWspro/bin:/opt/SUNWmotif/bin
-MY_PATH=${HOME}/bin:/sbin:/usr/local/bin/npm:/usr/local/bin/grunt:/usr/local/bin/nvm
+MY_PATH=${HOME}/bin:/sbin:/usr/local/bin/npm:/usr/local/bin/grunt:/usr/local/bin/nvm:${HOME}/.local.bin
 
 STANDARD_MANPATH=/usr/man:/usr/share/man:/usr/X11R5/man
 LOCAL_MANPATH=/usr/local/man
 MY_MANPATH=${HOME}/man
 
 alias grep="grep --color=auto"
-alias ls="ls -G --color=auto"
-alias ll="ls -l -a -G --color=auto"
-alias la="ls -a -G --color=auto"
+alias ls="ls -G"
+alias ll="ls -l -a -G"
+alias la="ls -a -G"
 alias ack="ack --smart-case"
 
 HOST=`hostname`
@@ -64,7 +64,7 @@ export MANPATH
 PS1="[\u@\h@\w]\$ "
 export PROMPT_DIRTRIM=3
 
-PATH=$PATH:~/bin
+#PATH=$PATH:~/bin
 alias swipl="env -i swipl"
 alias ll="ls -l"
 alias restart="source ~/.bashrc"
