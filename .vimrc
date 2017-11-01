@@ -64,6 +64,8 @@ let g:ctrlp_max_files = 0
 "
 "for Session
 let g:session_autoload = 'no'
+let g:session_autosave_periodic = 1
+let g:session_autosave_silent = 1
 
 "end for Session
 "for nerdtree
