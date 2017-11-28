@@ -77,7 +77,8 @@ export LC_COLLATE=C
 umask 007
 alias irb="irb --prompt simple -r irb/completion"
 
-ssh-add
+#ssh-add --adds my keys to remote servers
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
