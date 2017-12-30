@@ -56,6 +56,7 @@ export UNAME=`uname`
 
 
 PATH=$PATH:$MY_PATH:$LOCAL_PATH:$STANDARD_PATH:.
+PATH=$Path:${HOME}/.local/share/umake/bin/:.
 MANPATH=$MANPATH:$MY_MANPATH:$LOCAL_MANPATH:$STANDARD_MANPATH:.
 export MANPATH
 
@@ -78,6 +79,9 @@ umask 007
 alias irb="irb --prompt simple -r irb/completion"
 
 #ssh-add --adds my keys to remote servers
+
+#should make this on every computer
+export workspace="$HOME/workspace"
 
 
 export NVM_DIR="$HOME/.nvm"
