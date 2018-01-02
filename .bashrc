@@ -56,7 +56,7 @@ export UNAME=`uname`
 
 
 PATH=$PATH:$MY_PATH:$LOCAL_PATH:$STANDARD_PATH:.
-PATH=$Path:${HOME}/.local/share/umake/bin/:.
+PATH=$PATH:${HOME}/.local/share/umake/bin/:.
 MANPATH=$MANPATH:$MY_MANPATH:$LOCAL_MANPATH:$STANDARD_MANPATH:.
 export MANPATH
 
