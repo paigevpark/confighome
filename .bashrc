@@ -83,6 +83,9 @@ alias irb="irb --prompt simple -r irb/completion"
 #this adds vim support to the command line
 set -o vi
 
+#useful git command
+#alias openDiffs="vim $(git diff $1 | egrep "^....b/" | cut -d " " -f 2 | cut -d "/" -f 2-)"
+
 #should make this on every computer
 export workspace="$HOME/workspace"
 
