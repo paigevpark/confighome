@@ -95,6 +95,10 @@ nnoremap <leader>a ":Ack!<Space>--smart-case"
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
+"brew install ripgrep
+if executable('rg')
+    let g:ackprg = 'rg --vimgrep --no-heading'
+endif
 "end for ack.vim
 
 "for vim-airline

@@ -80,6 +80,9 @@ alias irb="irb --prompt simple -r irb/completion"
 
 #ssh-add --adds my keys to remote servers
 
+#this adds vim support to the command line
+set -o vi
+
 #should make this on every computer
 export workspace="$HOME/workspace"
 
