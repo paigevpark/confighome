@@ -44,7 +44,8 @@ LOCAL_MANPATH=/usr/local/man
 MY_MANPATH=${HOME}/man
 
 alias grep="grep --color=auto"
-alias ls="ls -G"
+alias ls="ls -GF"
+alias rm="rm -i"
 alias ll="ls -l -a -G"
 alias la="ls -a -G"
 alias ack="ack --smart-case"
@@ -63,6 +64,14 @@ export MANPATH
 #\w will give you whole directory
 #\W will give you current
 
+function print_symlink {
+    wd="$(pwd)"
+    linkdir="$(readlink -n $wd)";
+    if readlink -n $wd >/dev/null; then
+echo " -> $linkdir ";
+    fi
+}
+
 function parse_git_branch {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo "("${ref#refs/heads/}")"
@@ -71,18 +80,17 @@ function parse_git_branch {
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
+DEFAULT="\[\e[0m\]"
 
 
-PS1="[\u@\h@\w$YELLOW]\$(parse_git_branch)$GREEN\$ "
+PS1="$DEFAULT[\u@$RED\w$DEFAULT]$YELLOW\$(parse_git_branch)$DEFAULT \$ "
 export PROMPT_DIRTRIM=3
 
 #PATH=$PATH:~/bin
 alias swipl="env -i swipl"
 alias ll="ls -l"
 alias restart="source ~/.bashrc"
-alias gcc="gcc -g" 
-#alias gcc="gcc -Wall -g -std=gnu1x -I/cs/www/classes/cs352/fall15/h"
-#alias gcc="gcc -Wall -g" 
+alias gcc="gcc -g"
 
 alias vg="valgrind --leak-check=full"
 export LC_COLLATE=C
@@ -93,6 +101,9 @@ alias irb="irb --prompt simple -r irb/completion"
 
 #this adds vim support to the command line
 set -o vi
+#clipboard support
+#can also do :w !pbcopy while visual mode
+set clipboard=unnnamed
 
 #useful git command
 #alias openDiffs="vim $(git diff $1 | egrep "^....b/" | cut -d " " -f 2 | cut -d "/" -f 2-)"
