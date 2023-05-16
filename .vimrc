@@ -55,7 +55,7 @@ set cmdheight=2
 set wrap
 set ignorecase
 set smartcase
-set relativenumber
+"set relativenumber
 set backspace=indent,eol,start
 set laststatus=2
 set statusline+=%F
